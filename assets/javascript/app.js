@@ -11,6 +11,14 @@ var intervalId;
 var clockRunning = false;
 var correctAnswers = 0;
 
+/* 
+data
+    {
+        name: anc,
+        ratings: 10
+    }
+*/
+
 // stopwatch object which contains the clock functions
 var stopwatch = {
 
@@ -23,7 +31,7 @@ var stopwatch = {
         //checks the selection that is clicked on for the value "correct"
         if (clockRunning) {
             var selection = $(this).val().trim();
-            if (selection === "correct" && correctAnswers < 11) {
+            if (selection === "correct" && correctAnswers <= 11) {
                 correctAnswers++
             }
 
@@ -35,9 +43,9 @@ var stopwatch = {
         }
 
         //prevent a selection from being made if the game hasn't started
-        else if (!clockRunning) {
-            event.preventDefault();
-        }
+        // else (!clockRunning) {
+        //     event.preventDefault();
+        // }
     },
 
     //function that runs if the "reset" button is clicked
@@ -88,8 +96,8 @@ var stopwatch = {
 
     //function that converts the time to display it in minutes and seconds
     timeConverter: function(t) {
-        var minutes = Math.floor(t / 120);
-        var seconds = t - (minutes * 120);
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
         if (seconds < 10) {
             seconds = "0" + seconds;
         }
