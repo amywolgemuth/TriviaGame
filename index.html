@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link to favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico" />
+    
+    <!-- jQuery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- link to external css files and fonts -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Cincinnati Trivia<div id="time-remaining">2:00</div>
+        </h1>
+    </header>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <button class="button" id="start-button">Start!</button>
+
+    <br>
+
+    <!-- Multiple choice trivia questions. I'm repeating a lot and there is probably a better way -->
+    <div class="question">The Cincinnati Bengals moved out of Riverfront Stadium after the 1999 season and the Reds
+        followed them three years later. Which river gave the stadium its name?</div>
+
+    <!-- Inside each form, the value of the correct answer is set to "correct" -->
+    <form>
+        <input type="radio" name=1 class="choice" value="wrong"> Allegheny River
+        <input type="radio" name=1 class="choice" value="wrong"> Kentucky River
+        <input type="radio" name=1 class="choice" value="wrong"> Hocking River
+        <input type="radio" name=1 class="choice" value="correct"> Ohio River
+    </form>
+
+    <br>
+
+    <div class="question">Since 1999, Cincinnati has hosted an annual marathon on the first Sunday of May. By what
+        unusual name is this race known?</div>
+
+    <form>
+        <input type="radio" name=2 class="choice" value="correct"> The Flying Pig Marathon
+        <input type="radio" name=2 class="choice" value="wrong"> The Talking Dog Marathon
+        <input type="radio" name=2 class="choice" value="wrong"> The Soaring Elephant Marathon
+        <input type="radio" name=2 class="choice" value="wrong"> The Barking Cow Marathon
+    </form>
+
+    <br>
+
+    <div class="question">What area code do you need to dial to reach someone living in the Cincinnati region?</div>
+
+    <form>
+        <input type="radio" name=3 class="choice" value="wrong"> 212
+        <input type="radio" name=3 class="choice" value="wrong"> 202
+        <input type="radio" name=3 class="choice" value="correct"> 513
+        <input type="radio" name=3 class="choice" value="wrong"> 747
+    </form>
+
+    <br>
+
+    <div class="question">Which city lies just across the river to the south of Cincinnati?</div>
+
+    <form>
+        <input type="radio" name=4 class="choice" value="wrong"> Dayton OH
+        <input type="radio" name=4 class="choice" value="correct"> Covington KY
+        <input type="radio" name=4 class="choice" value="wrong"> Bowling Green KY
+        <input type="radio" name=4 class="choice" value="wrong"> Chattanooga TN
+    </form>
+
+    <br>
+
+    <div class="question">If you are flying to Cincinnati, what luggage tags should be attached to your bags?</div>
+
+    <form>
+        <input type="radio" name=5 class="choice" value="correct"> CVG
+        <input type="radio" name=5 class="choice" value="wrong"> CTI
+        <input type="radio" name=5 class="choice" value="wrong"> CIN
+        <input type="radio" name=5 class="choice" value="wrong"> COH
+    </form>
+
+    <br>
+
+    <div class="question">What famous movie was filmed in Cincinnati</div>
+
+    <form>
+        <input type="radio" name=6 class="choice" value="wrong"> Pulp Fiction 1994
+        <input type="radio" name=6 class="choice" value="correct"> Rain Man 1988
+        <input type="radio" name=6 class="choice" value="wrong"> Back to the Future 1985
+        <input type="radio" name=6 class="choice" value="wrong"> Groundhog Day 1993
+
+    </form>
+
+    <br>
+
+    <div class="question">What famous chili restaurant is located in Cincinnati?</div>
+
+    <form>
+
+        <input type="radio" name=7 class="choice" value="wrong"> Varallo's
+        <input type="radio" name=7 class="choice" value="wrong"> Smitty's Grill
+        <input type="radio" name=7 class="choice" value="correct"> Skyline
+        <input type="radio" name=7 class="choice" value="wrong"> Ike's
+    </form>
+
+    <br>
+
+    <div class="question">Cincinnati is known for starting this professional sport.</div>
+
+    <form>
+
+        <input type="radio" name=8 class="choice" value="wrong"> ice-hockey
+        <input type="radio" name=8 class="choice" value="wrong"> football
+        <input type="radio" name=8 class="choice" value="wrong"> basketball
+        <input type="radio" name=8 class="choice" value="correct"> baseball
+    </form>
+
+
+    <br>
+
+    <div class="question">What county is Cincinnati located in?</div>
+
+    <form>
+
+        <input type="radio" name=9 class="choice" value="correct"> Hamilton
+        <input type="radio" name=9 class="choice" value="wrong"> Franklin
+        <input type="radio" name=9 class="choice" value="wrong"> Pickaway
+        <input type="radio" name=9 class="choice" value="wrong"> Richland
+    </form>
+
+    <br>
+
+    <div class="question">What Famous film maker is from Cincinnati?</div>
+
+    <form>
+        <input type="radio" name=10 class="choice" value="wrong"> George Lucas
+        <input type="radio" name=10 class="choice" value="wrong"> Clint Eastwood
+        <input type="radio" name=10 class="choice" value="wrong"> James Cameron
+        <input type="radio" name=10 class="choice" value="correct"> Steven Spielberg
+    </form>
+
+    <br>
+
+    <div class="question">We couldn't have a quiz about Cincinnati without mentioning the city's NFL franchise. Which
+        team defeated the Bengals on both of their 20th-century Super Bowl appearances?</div>
+
+    <form>
+        <input type="radio" name=11 class="choice" value="wrong"> Dallas Cowboys
+        <input type="radio" name=11 class="choice" value="wrong"> Green Bay Packers
+        <input type="radio" name=11 class="choice" value="correct"> San Francisco 49ers
+        <input type="radio" name=11 class="choice" value="wrong"> New Your Giants
+    </form>
+
+    <br>
+
+    <!-- buttons for completing the quiz and restarting the game, linked to the javascript for functionality -->
+    <button class="button" id="done-button">Done!</button>
+    <button id="restart-button">Restart!</button>
+
+    <!-- link to external javaScript file -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- link to external javaScript file -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>
